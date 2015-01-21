@@ -1,0 +1,44 @@
+= LÖVE for Newbies
+A book about LÖVE, Games and Lua.
+
+The collaborative book will be divided into three main units:
+
+- A basic course to learn the principles and the syntax of Lua;
+- A basic course to learn the fundamentals of creating games using the LÖVE framework;
+- An area of examples and snippets containing best practices in game development.
+
+
+== METRICS:
+. All these main units we’ll call as “World”, and each chapter, as “Level”;
+. At the end of every “Level”, we’ll remind the reader about what has been learned in this chapter and we’ll show some practical issues that now he will be able to solve;
+. Examples, WE LOVE IT. Some computer books are extremely boring because they have various concepts released without practical examples. Examples make better understand something. Then examples will be widely used in the book.
+. Make it clear that the reader is learning to do really interesting things. So they will feel more motivated to continue to understand the framework.
+. Be clear and direct when talking something new. Keep stupidly simple.
+. Every Level ends with additional exercises that the reader can choose to try
+. Give “Pro Tips” and “Watch out!”-notices where fitting (Admonitions)
+. Use informal language and short text to show new content.
+
+The book s written using a generator called Asciidoctor. +
+Quick Reference: http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
+
+We have extended the AsciiDoctor syntax with "livecode" blocks and block macros. Use like this:
+
+----
+livecode::test[] // <1>
+
+livecode::test[name=test2,preload="image1.png,image2.png"] // <2>
+
+[livecode,example,preload=audio.wav] // <3>
+++++
+function love.draw()
+    love.graphics.setColor( 255, 255, 0, 255 )
+    love.graphics.rectangle( "fill", 10, 10, 100, 100 )
+end
+++++
+----
+<1> loads love2D-book-code/test directory
+<2> load love2D-book/code/test directory and the assets called image1.png and image2.png. It's name is test2 so it doesn't conflict with the first.
+<3> runs the code below it; has the name of "example" and loads audio.wav
+
+Welcome to collaborate with the project :D
+
